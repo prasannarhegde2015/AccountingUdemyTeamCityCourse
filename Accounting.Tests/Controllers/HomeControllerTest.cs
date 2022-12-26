@@ -1,17 +1,18 @@
 ﻿using Accounting.Controllers;
 using NUnit.Framework;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Accounting.Tests.Controllers
 {
-    [TestFixture]
+    [TestClass]
     public class HomeControllerTest
     {
-        [Test]
+        [TestMethod]
         public void Index()
         {
             var controller = new HomeController();
             var view = controller.Index();
-            Assert.NotNull(view);
+            Assert.IsNotNull(view,"View was NULL");
         }
     }
 }
